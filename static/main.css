@@ -1,0 +1,92 @@
+div {
+/*  border: 1px solid red;*/
+}
+
+html, body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    height: 100%
+}
+
+/*ul {
+    border-bottom: hidden;
+}*/
+
+.head {
+    background-color: #6D4F7C;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    height: 7%
+}
+
+.r2 {
+    height: 90%
+}
+
+.container  {
+    width: 100%;
+    height: 100%;
+}
+
+.navCol{
+    background-color: #4A2B59;
+    color: #33383E;
+    text-align: left;
+}
+
+.placeList {
+    font-size: 150%;
+    text-decoration: none;
+    font-weight: 200;
+    color: #C7CEC2;
+    justify-content: right;
+}
+
+li:hover.placeList {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #7D4996;
+}
+
+.active {
+    background-color: #7D4996;
+}
+
+.main-title {
+    font-size: 200%;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+/*input[type=text], input[type=password]{
+    width: 100%;
+    font-size: 24px;
+    padding: 2px;
+    font-family: monospace;
+}*/
+
+
+.padding-top {
+    paddign-top: 2%;
+}
+
+.icon {
+    height: 100%;
+    cursor: pointer;
+}
+
+#map {
+    height: 100%;
+}
+
+.col100 {
+    height: 100%
+}
+
+.filterLabel {
+    font-size: 150%;
+    text-decoration: none;
+    font-weight: 200;
+    color: #C7CEC2;
+}
