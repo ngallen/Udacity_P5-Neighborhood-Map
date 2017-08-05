@@ -8,7 +8,7 @@
 
 ----
 ### APIs Used:
-- [FourSquare] - https://developer.foursquare.com/overview/attribution
+- [FourSquare](https://developer.foursquare.com/overview/attribution)
 - [Google Maps]
 
 ### Frameworks Used:
