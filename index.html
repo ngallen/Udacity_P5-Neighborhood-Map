@@ -30,7 +30,7 @@
       <label class="filterLabel" for="filter">Filter:</label>
       <input id="filter" type="text" data-bind="textInput: filter"/>
       <ul data-bind="foreach: filteredList">
-        <li class="placeList" data-bind="text: name, click: $parent.setPlace"></li>
+        <li class="placeList" data-bind="text: name, click: $parent.setCurrPlaceCaller, css: placeClass"></li>
       </ul>
     </div>
     <div class="col-xs-9" id="map"></div>
