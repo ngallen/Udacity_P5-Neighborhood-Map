@@ -63,6 +63,7 @@ function initMap() {
         place.placeMarker.addListener("click", function(){
           setCurrPlace(place);
         });
+
         //Initialize foursquare info
         foursquareSearch(place);
       });
@@ -72,6 +73,10 @@ function initMap() {
     }
 
     infoWindow = new google.maps.InfoWindow();
+
+    google.maps.event.addListener(infoWindow,'closeclick',function(){
+    removeCurrPlace(); //removes the marker when info window closed
+});
   }
 
 //Uses FourSquare API for additional information requests on a place
@@ -168,8 +173,7 @@ var ViewModel = function () {
 function setCurrPlace(clickedPlace){
     if(mapRef !== null && clickedPlace !== self.currP()){
       if(currP() !== undefined){
-        currP().placeMarker.setAnimation(null);
-        currP().placeClass('inactivePlace');
+        removeCurrPlace();
       }
       currP(clickedPlace);
       currP().placeMarker.setAnimation(google.maps.Animation.BOUNCE);
@@ -184,6 +188,12 @@ function setCurrPlace(clickedPlace){
       infoWindow.setContent(htmlContent);
       infoWindow.open(mapRef, currP().placeMarker);
     }
+}
+
+function removeCurrPlace(){
+    currP().placeMarker.setAnimation(null);
+    currP().placeClass('inactivePlace');
+    currP(undefined);
 }
 
 // Google maps api error handler
